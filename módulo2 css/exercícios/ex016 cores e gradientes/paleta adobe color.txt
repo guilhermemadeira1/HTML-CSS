@@ -1,0 +1,20 @@
+/* Color Theme Swatches in Hex */
+.Seychelle-Islands-1-hex { color: #FAEDDA; }
+.Seychelle-Islands-2-hex { color: #AEE8CA; }
+.Seychelle-Islands-3-hex { color: #6ACFC9; }
+.Seychelle-Islands-4-hex { color: #26B6C6; }
+.Seychelle-Islands-5-hex { color: #3C2F80; }
+
+/* Color Theme Swatches in RGBA */
+.Seychelle-Islands-1-rgba { color: rgba(249, 237, 218, 1); }
+.Seychelle-Islands-2-rgba { color: rgba(174, 232, 202, 1); }
+.Seychelle-Islands-3-rgba { color: rgba(105, 207, 200, 1); }
+.Seychelle-Islands-4-rgba { color: rgba(38, 182, 198, 1); }
+.Seychelle-Islands-5-rgba { color: rgba(59, 47, 128, 1); }
+
+/* Color Theme Swatches in HSLA */
+.Seychelle-Islands-1-hsla { color: hsla(35, 76, 91, 1); }
+.Seychelle-Islands-2-hsla { color: hsla(148, 55, 79, 1); }
+.Seychelle-Islands-3-hsla { color: hsla(176, 51, 61, 1); }
+.Seychelle-Islands-4-hsla { color: hsla(185, 67, 46, 1); }
+.Seychelle-Islands-5-hsla { color: hsla(249, 46, 34, 1); }

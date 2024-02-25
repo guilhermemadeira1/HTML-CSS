@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon">
+    <title>Outras formatações</title>
+</head>
+<body>
+    <h1>Outras formatações</h1>
+    <hr>
+    <h2>Formatação de código-fonte</h2>
+    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript.</p>
+
+    <p>A tag &lt;code &gt; &lt;/code &gt;trasforma um texto comum em formato de código, ou seja, com todos as letras e caracteres com o mesmo tamanho.</p>
+
+    <p>Já a tag &lt;pre &gt; &lt;/pre &gt; preserva os espaçamentos do texto, evitando que o texto fique numa só linha reta na página. .</p>
+
+    <h3>Código python com identação:</h3>
+  <p> 
+      <pre>
+          <code>
+              num= int(input('Digite um número'))
+              if num % 2 == 0:
+                print(f'O número {num} é par')
+              else:
+                print(f'O número {num} é ímpar')
+              print('Fim fo programa')
+          </code>
+      </pre>
+  </p>
+<p>No código acima usamos a tag &lt;pre&gt; &lt;/pre &gt para manter a identação do código, preservando os espaços.<br>E a tag &lt;code &gt &lt;/code &gt; para deixar o texto em formato de código.</p>
+
+<h2>Formatação de citações</h2>
+
+<h3>Citações simples</h3>
+
+<p>Podemos fazer citações simples com a tag semântica &lt;q &gt &lt;/q &gt que coloca aspas no texto atribuindo significado de citação dentro da página. 
+<br>
+<EM><mark> OBS: Simplesmente digitar aspas não dá significado de citação para o texo na página.</mark></EM>
+<br>
+Exemplo: <q>O computador é um burro muito rápido.</q>
+<br>
+</p>
+
+<h3>Citações completas</h3>
+<p>
+Podemos criar citações dentro de blocos de citações (Blockquotes) usando a tag semântica &lt;blockquote&gt; &lt;/blockquote&gt;.<br>Exemplo:
+<br>
+Assim dizia Sócrates:
+<blockquote>Só sei que nada sei.</blockquote>Acima, colocamos a citação dentro de um <EM>blockquote</EM> (bloco de citação).
+<br>
+Também podemos atribuir, dentro da tag <EM>blockquote</EM>, o endereço de uma citação de uma matéria, livro ou página disponível na web. Usando o parâmetro: <strong>
+  <blockquote>&lt;blockquote cite= "https://endereço.com.br/matéria" &gt; &lt;/blockquote&gt;
+  </blockquote>
+</strong>
+
+<p>OBS: <EM>O parâmetro &lt;blockquote cite= ""&gt; apenas armazena o endereço na tag e será visível dentro do código HTML para algoritmos de busca.</EM> </p>
+</p>
+
+<h2>Abreviações (Títulos em termos)</h2>
+<p>Estou estudando <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr></p>
+
+<p>São feitas da seguinte maneira: &lt;abbr&gt; title="<EM>Título do termo</EM>"><EM>Termo</EM> &lt;/abbr&gt;<br>Resultado: &nbsp;<abbr title="Título do termo">Termo</abbr></p>
+<pre>
+
+
+
+
+</pre>
+<hr>
+</body>
+</html>

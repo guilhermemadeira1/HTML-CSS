@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: dimgray;
+            width: 800px;
+            margin: auto;
+            padding: 2px;
+            box-shadow: 0px 2px 3px #00000071;
+        }
+        header{
+            background-color: #ffffff;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        header>h1{
+            text-align: center;
+            color: #665353;
+            background-color: #c0aaaa96;
+            border-radius: 15px 0px;
+            /*border-radius top-left e bottom-right -> top-right e bottom-left*/
+
+            padding: 3px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            box-shadow: 1px 3px 2px #00000075;
+       
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+      
+        article>h2{
+            text-align: center;
+            background-color: #8f8e8e; 
+        }
+        article>h3{
+           border: solid 2px #ffffff;
+           padding: 1px;
+        }
+        nav{
+            background-color: #888585;
+            padding: 1px;
+            text-align: center;
+            border: solid 2px #665353;
+            border-radius: 10px;
+            box-shadow: 1px 1px 2px #00000060;
+        }
+        nav>a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+        nav>a:hover{
+            text-decoration: underline;
+            background-color: #e2e2d9;
+            color:#6b6868;
+        }
+        main{
+            background-color: white;
+            margin: 10px;
+            padding: 10px;     
+            border-radius: 5px;
+        }
+        footer{
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 4px;
+            text-align: center;
+            text-decoration: underline;
+            border-radius: 5px;
+        }
+        article{
+            background-color: #bbbbbb;
+            margin: 11px 51px;
+            margin-bottom: 15px;
+            padding: 8px;
+            text-align: justify;
+
+            border-radius: 10px 10px 10px 1px;
+            /*top-left -> top-right-> bottom-right -> bottom-left*/
+
+            box-shadow: inset 5px 4px 3px -1px #00000050;
+            /*inset= sombra interna
+        
+            sombra horizontal -> vertical -> espalhamento -> grossura da sombra.
+            */
+        }
+        article > aside{
+            background-color: #9e9e9e;
+            padding-left: 20px;
+        }
+        article>p{
+            margin: 15px;
+        }
+        article>h3{
+            margin: 5px;
+        }
+        #sessão2>h2{
+            margin-left: 14px;
+            font-size: 20px;
+        }
+        li>a{
+            text-decoration: none;
+            color: black;
+        }
+        li>a:hover{
+            background-color: #b4b4b4;
+            padding: 2px;
+            box-shadow: 1px 1px 1px;
+        }
+        li>a:active{
+            color: white;
+            background-color:#9b2020 ;
+        }
+        .destaque1{
+            color: #9b2020;
+            display: block;
+            /*display: block; faz elemento inline-level virar block-level, ficando numa caixa separada do restante do texto*/
+        }
+        .destaque2{
+            color: #0c358d;
+
+        }
+    </style>
+</head>
+<body>
+    <!--tags de agrupamento funcionam como divs, serverm pra organizar a estrutura do site.-->
+
+    <header><!--cabeçalho-->
+        <h1>Meu site</h1>
+        <nav><!--endereços de navegação-->
+           <a href="#">link1</a>
+           <a href="#">link2</a>
+           <a href="#">link3</a>
+           <a href="#">link4</a>
+           <a href="#">link5</a>
+           <a href="#">link6</a>
+        </nav>
+    </header>
+    <main><!--conteúdo principal-->
+        <section id="noticias">
+            <article id="sessão1">
+                <h2>Noticias</h2>
+                <h3><span class="destaque1">Lorem</span> ipsum dolor</h3>
+                <p><span class="destaque2">Lorem </span>ipsum dolor sit amet consectetur adipisicing elit. <span class="destaque2">Obcaecati</span> quisquam eaque consequatur nemo illum ut a voluptas provident recusandae officia temporibus, necessitatibus quia. Tempora, mollitia consectetur? <span class="destaque2">Temporibus</span> voluptatibus perspiciatis libero? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas, commodi est at cum adipisci voluptas! Quo, consequatur?</p>
+                <aside>
+                    <p>Texto escrito por:</p>
+                </aside>
+            </article>
+
+            <article>
+                <h3><span class="destaque1">Lorem </span>ipsum dolor</h3>
+                <p><span class="destaque2">Lorem</span> ipsum dolor sit amet consectetur adipisicing elit. Nisi eaque magni quaerat laboriosam, sit temporibus fuga quidem quae perferendis. <span class="destaque2">Molestias</span> atque perspiciatis aperiam impedit, architecto voluptatibus sapiente enim ut. Voluptates.
+                    <aside>
+                        <p>Texto escrito por:</p>
+                    </aside>
+                </p>
+            </article>
+        </section>
+
+        <section id="sessão2">
+            <h2>Veja também:</h2>
+            <ul>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolorLorem ipsum dolor</a></li>
+                <li><a href="#">Lorem ipsum dolor</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer><!--rodapé-->
+       Desenvolvido por: &copy; empresatal | contato: 291290
+    </footer>
+</body>
+</html>

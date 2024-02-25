@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas OL e UL</title>
+</head>
+<body>
+    <h1>Trabalhando com listas</h1>
+<hr>
+    <h2>1. Listas ordenadas <abbr title="Ordered List">&lt;ol &gt; &lt;/ol &gt;</abbr></h2>
+    <h3>Cronograma (type="1" numérico) </h3>
+
+        <ol type="1" start="1"> <!--type= "1, A, a, I, i,"-->
+            <li>Acordar
+            <li>Tomar café
+            <li>Escovar os dentes
+            <li>Colocar ração pros bichos
+            <li>Estudar
+            <li>Almoçar
+            <li>Estudar
+            <li>Lanchar
+            <li>Tomar banho
+            <li>Jantar
+            <li>Estudar
+            <li>Dormir
+        </ol>
+        <h3>Cronogama (type="A" alfabético maúsculo)</h3>
+        <ol type="A">
+            <li>Acordar
+            <li>Tomar café
+            <li>Escovar os dentes
+            <li>Colocar ração pros bichos
+            <li>Estudar
+            <li>Almoçar
+            <li>Estudar
+            <li>Lanchar
+            <li>Tomar banho
+            <li>Jantar
+            <li>Estudar
+            <li>Dormir
+        </ol>
+        <h3>Crnograma (type="a" alfabético minúsculo)</h3>
+    <ol>
+            <li>Acordar
+            <li>Tomar café
+            <li>Escovar os dentes
+            <li>Colocar ração pros bichos
+            <li>Estudar
+            <li>Almoçar
+            <li>Estudar
+            <li>Lanchar
+            <li>Tomar banho
+            <li>Jantar
+            <li>Estudar
+            <li>Dormir
+    </ol>
+
+    <h3>Cronograma (type="I" romanos maúsculos)</h3>
+    <ol type="I">
+            <li>Acordar
+            <li>Tomar café
+            <li>Escovar os dentes
+            <li>Colocar ração pros bichos
+            <li>Estudar
+            <li>Almoçar
+            <li>Estudar
+            <li>Lanchar
+            <li>Tomar banho
+            <li>Jantar
+            <li>Estudar
+            <li>Dormir
+    </ol>
+    <h3>Cronograma (type="i" romanos minúsculos)</h3>
+<ol type="i">
+        <li>Acordar
+        <li>Tomar café
+        <li>Escovar os dentes
+        <li>Colocar ração pros bichos
+        <li>Estudar
+        <li>Almoçar
+        <li>Estudar
+        <li>Lanchar
+        <li>Tomar banho
+        <li>Jantar
+        <li>Estudar
+        <li>Dormir
+</ol>
+        <p>Criando uma lista ordenada &lt;ol &gt; &lt;/ol &gt;, ao inserir mais itens, a lista vai alterar a numerção automaticamente. <br>Cada item da lista deve possuir a tag &lt; li &gt;, que significa <EM>list item. <br>O &lt;/li &gt; no final do item é opcional.</EM></p>
+        <p>Dentro da tag &lt;ol &gt; &lt;/ol &gt; podemos inserir type="" para determinar o tipo da lista <br>e start="" para definir a numeração de partida.</p>
+        <blockquote>
+            <p>A posição de início da lista <EM>start=""</EM> só pode ser definida em valores numéricos (posição 1,2,3...), mesmo se a lista for do tipo alfabética ou romano.</p>
+        </blockquote>
+        <h3>Tipos de lista ordenada</h3>
+        <p>O type="1" cria lista numérica 1,2,3,4... <br>O type="A" cria lista alfabética maúscula A,B,C,D... <br>O type="a" cria uma lista alfabética minúscula a,b,c,d... <br>O type="I" cria lista em números romanos com letras maúsculas: I,II,III,IV... <br>O type="i" cria lista em números romanos com letras minúsculas i,ii,iii,iv...
+        </p>
+
+    <h2>2. Listas não ordenadas <abbr title="Unordered List">&lt;ul &gt; &lt;/ul &gt;</abbr></h2> <!--type= "disk, circle, square"-->
+    <h3>Lista de compras (type="disk" bolinha preta)</h3>
+    <ul type="disk">
+      <li>Pão</li>
+      <li>4 caixas de leite</li>
+      <li>Manteiga</li>
+      <li>Óleo de cozinha</li>
+      <li>Sal</li>
+      <li>Açúcar</li>
+      <li>2 sacos de arroz</li>
+      <li>Papel higiênico</li>
+      <li>2 Pastas de dente</li>
+      <li>3 Sabonetes</li>
+    </ul>
+
+    <h3>Lista de compras (type="circle" círculo)</h3>
+    <ul type="circle">
+        <li>Pão</li>
+        <li>4 caixas de leite</li>
+        <li>Manteiga</li>
+        <li>Óleo de cozinha</li>
+        <li>Sal</li>
+        <li>Açúcar</li>
+        <li>2 sacos de arroz</li>
+        <li>Papel higiênico</li>
+        <li>2 Pastas de dente</li>
+        <li>3 Sabonetes</li>
+    </ul>
+    <h3>Lista de compras (type="square" quadrdado)</h3>
+    <ul type="square">
+      <li>Pão</li>
+      <li>4 caixas de leite</li>
+      <li>Manteiga</li>
+      <li>Óleo de cozinha</li>
+      <li>Sal</li>
+      <li>Açúcar</li>
+      <li>2 sacos de arroz</li>
+      <li>Papel higiênico</li>
+      <li>2 Pastas de dente</li>
+      <li>3 Sabonetes</li>
+    </ul>
+<h2>Listas mistas (com sub-listas)</h2>
+
+<h3>Comidas</h3>
+<ol>
+   <li>Doces:
+     <ol type="a">
+        <li>Bolos</li>
+           <ul>
+            <li>Bolo com cobertura</li>
+              <ul type="circle">
+                <li>de chocolate</li>
+                <li>de morango</li>
+                <li>de limão</li>
+              </ul>
+            <li>Bolo sem cobertura</li>
+               <ul type="circle">
+                <li>Bolo de fubá</li>
+                <li>Bolo de chocolate</li>
+               </ul>
+           </ul>
+        <li>Sorvete</li>
+         <ul type="square">
+            <li>Chcolate</li>
+            <li>Morango</li>
+            <li>Limão</li>
+            <li>Creme</li>
+         </ul>
+        <li>Trufa de chocolate</li>
+        <ul>
+            <li>Com recheio de limão</li>
+            <li>com recheio de chocolate</li>
+        </ul>
+     </ol>
+    <li>Salgados:</li>
+    <ol type="a" start="4">
+        <li>Salgados fritos</li>
+            <ul type="square">
+                <li>Coxinha</li>
+                <li>Quibe</li>
+                <li>Bolo de aipim</li>
+            </ul>
+        <li>Pastel</li>
+           <ul type="square">
+              <li>Pastel de queijo</li>
+              <li>Pastel de carne</li>
+              <li>Pastel de queijo com presunto</li>
+           </ul>
+        <li>Pão de queijo</li>
+    </ol>
+    <li>Bebidas</li>
+    <ol type="a" start="9">
+        <li>Sucos</li>
+          <ul type="square">
+            <li>Suco de caju</li>
+            <li>Suco de maracujá</li>
+            <li>Suco de limão</li>
+          </ul>
+        <li>Refrigerantes</li>
+           <ul type="square">
+            <li>Coca-cola</li>
+            <li>Fanta</li>
+            <li>Pepsi</li>
+           </ul>
+    </ol>
+</ol>
+
+<h2>Lista de definições <abbr title="Definition List">&lt;dl &gt; &lt;/dl &gt;</abbr></h2>
+
+<dl> <!--Lista de definições-->
+<dt>HTML</dt> <!--Termo-->
+<dd>HyperText Markup Language,é uma linguagem de marcação para criação de conteúdo dentro de um site, como fotos, vídeos, títulos, parágrafos,etc.</dd><!--Descrição do termo-->
+
+<dt>CSS</dt>
+<dd>Cascating Style Sheets, é uma linguagem de marcação para a criação do design do site.</dd>
+
+<dt>JavaScript</dt>
+<dd>JavaScript, é uma linguagem de programação para a criação de interatividade dinâmica em um site.</dd>
+</dl><br>
+<p>Listas de definições <abbr title="Lista de definições">&lt;dl &gt; &lt;/dl &gt;</abbr> funcionam como uma listagem de termos de dicionário, em que cada item da lista (termo) possui uma definição ao lado.</p>
+<p>Tags: </p><p>Lista de definição<abbr title="Definition List"> &lt;dl &gt; &lt;/dl&gt;</abbr>
+    
+    <br>Termo com definição<abbr title="Definition Term"> &lt;dt&gt; &lt;/dt&gt;</abbr>
+    
+    <br>Descrição da definição<abbr title="Definition Description">&lt;dd &gt; &lt;/dd &gt;</abbr></p>
+<br>
+<hr>

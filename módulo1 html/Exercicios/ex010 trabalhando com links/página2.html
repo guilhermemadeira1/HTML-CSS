@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon">
+    <title>Links internos</title>
+</head>
+<body>
+    <h1>Links internos</h1>
+
+    <p>Se quisermos criar âncoras cujo endereço encaminha para uma página interna do próprio site, colocamos o arquivo html da página dentro de <strong>href=""</strong>, o <strong>target="_self"</strong> e o <strong>rel=""</strong> como <strong>"next"</strong><mark>(próxima página)</mark> ou <strong>"prev"</strong><mark>(página anterior)</mark>.</p>
+
+    <p><a href="página1.html" target="_self" rel="prev"> &lt; Clique aqui</a> para rever o tópico sobre links externos.</p>
+
+   <h2>rel="next" e "prev"</h2>
+
+    <p>Para que os links internos funcionem, o <mark>aquivo html</mark> selecionado em <strong>href=""</strong>, deve estar na mesma pasta da página anterior.</p>
+    <p>As diretivas <strong>"next"</strong> e <strong>"prev"</strong> em <strong>rel=""</strong> auxilia os algoritmos de busca do Google a identificar qual página vem antes e depois.</p>
+
+    <h2>Selecionando páginas de outros diretórios</h2>
+
+    <h3>Página de notícias</h3>
+    <p>Acesse também nossa <a href="notícias/Página de notícias.html" target="_self" rel="prev">página de notícias.</a></p>
+ 
+    <p>Neste exemplo, a página 3 (notícias) se encontra em outra pasta diferente. Neste caso, deve-se inserir o diretório da pasta junto ao arquivo: <strong>href="notícias/página3.html"</strong><br><strong>Ou apelas clicar dentro das aspas, Control+Espaço e selecionar a pasta e o arquivo.</strong></p>
+    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes Externas</title>
+    <!--Baixando fontes externas e estilizando-->
+    <style>
+        @font-face {
+           font-family: 'love';
+           src: url('fonts/love larry ttf.ttf') format('truetype');
+           font-weight: normal;
+           font-style: normal;
+        }
+        @font-face{
+            font-family: 'old london';
+            src: url('fonts/OldLondon.ttf') 
+            format('truetype');
+        }
+        /*Nós criamos um nome para cada fonte baixada em font-family e estilizamos*/
+
+        /*Tipos de format() formato da fonte:
+           > opentype (.otf)
+           > truetype (.ttf)
+           > embedded-opentype 
+           > truetype-aat (Apple Advanced Typography)
+           > svg
+        */
+        h1{
+          font-family: 'love';
+          font-size: 4em;
+          text-align: center;
+        }
+        h2{
+            font-family:'old london';
+            font-size: 4em;
+            text-align: center;
+        }
+    </style> 
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id accusantium quibusdam incidunt deserunt! Non a error culpa, architecto officia possimus explicabo nulla vero voluptate amet eligendi dolore placeat cumque. Incidunt!</p>
+    <h2>Sub título</h2>
+</body>
+</html>

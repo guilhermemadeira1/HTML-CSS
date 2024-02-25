@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes com google fonts</title>
+    <!--Importando fontes externas dentro da tag <head>-->
+
+   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+   <!--Work Sans-->
+
+    <style>
+        /*importando fontes externas pelo google fonts dentro da tag <style> ou na folha de estilo CSS*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+        /*Ubuntu mono*/
+
+        @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap'); /*kaushan script*/
+
+        h1{
+            /*shorthand*/
+            font: normal 900 3em 'Kaushan Script', sans-serif;
+            /*font-style -> font-weight -> font-size -> font-family*/
+        }
+        h2{
+            font-size: 2em;
+            font-family: 'kaushan script', sans-serif;
+            /*sans seriif é o tipo genérico caso a fonte anterior não carregue*/
+        }
+        body{
+            /*shorthand*/
+            font-size: 1em;
+            font-family: 'work sans', sans-serif;
+            /*sans serif é o tipo genérico caso as fontes anteriores não carreguem*/
+        }
+        h3{
+            font-family: 'Ubuntu mono';
+            font-style: italic;
+            font-size: 1.4em;
+            font-weight: 500;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Título</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ipsam ad excepturi odio! Blanditiis tempora nihil autem deserunt, dolor laudantium corporis vitae et dignissimos nisi quam cum est excepturi sunt! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, facere libero amet saepe cum necessitatibus maxime quibusdam sit dolorem inventore dignissimos sed quaerat perferendis magni non dolor numquam possimus similique!</p>
+    <h2>Subtítulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, recusandae unde iure esse id dolore fuga vero doloremque omnis quaerat suscipit architecto quidem labore corrupti minima quis voluptatum saepe! Nulla!</p>
+    <h3>Subtítulo do subtítulo</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita eaque, numquam dignissimos similique impedit quasi, corrupti, quis repellat cupiditate exercitationem facere consequatur itaque dolor vitae? Accusamus, voluptatibus! Fugiat, mollitia dolor.</p>
+</body>
+</html>

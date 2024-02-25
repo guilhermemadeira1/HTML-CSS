@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon">
+    <title>Links externos e internos</title>
+</head>
+<body>
+    <h1>Inserindo links externos</h1>
+
+    <h2>Âncoras (links)</h2>
+
+    <p>Qualquer ponto dentro de um site que ao clicar encaminha o usuário para outro caminho ou endereço, chamamos de <mark>âncora ou link</mark>.</p>
+
+    <p>Podemos colocar âncoras usando a tag <strong>&lt;a &gt; &lt;/a &gt;</strong></p>
+    
+    <p> Cujo parâmetro fica: <strong>&lt;a href="</strong><mark>link interno ou externo<strong>"</strong></mark><strong> target="</strong><mark>como o novo endereço será aberto</mark><strong>" rel="</strong><mark>a relação que a página tem com a novo endereço que foi ancorado</mark><strong>"&gt;</strong> <mark><strong>texto clicável</strong></mark> <strong>&lt;/a &gt;</strong></p>
+
+    <h2>Diretiva rel=""</h2>
+
+    <h3>rel="external"</h3>
+
+    <p>A diretiva <strong>rel="external"</strong> é utlizada para informar que o endereço ancorado vem de uma fonte externa, ou seja, não vem do mesmo documento do site, mas de outro site.</p>
+
+    <h3>rel="nofollow"</h3>
+
+    <p>Utilizamos a diretiva <strong>rel="nofollow"</strong> para o algoritmo de busca do Google não indexar o site externo junto á página quando a mesma for pesquisada.</p>
+   <p>Essa diretiva é utilizada quando <mark>
+       o endereço ancorado não é autêntico, não tem credibilidade ou não deve ser perpetuado.
+   </mark></p>
+
+    <h2>Diretiva target=" "</h2>
+    <h3>Abrir em nova aba (target="_blank")</h3>
+
+    Acesse o pdf da aula no <a href="https://github.com/gustavoguanabara/html-css/blob/master/aulas-pdf/10%20-%20Liga%C3%A7%C3%B5es%20em%20toda%20parte.pdf" target="_blank" rel="external">repositório público do GitHub. </a>
+ 
+    <p>No exemplo acima usamos <strong>target="_blank"</strong> após o link para abrir o endereço URL em outra aba. <br> Depois utilizamos <strong>rel="external"</strong> para marcar que o endereço vem do documento de outro site.</p>
+
+    <h3>Abrir na mesma aba (target="_self")</h3>
+    <p>Acesse a vídeo aula sobre o tema <a href="https://www.youtube.com/watch?v=LeOVXQDsAIY&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n&index=27" target="_self" rel="external">cliando aqui.</a></p>
+
+    <p>Já neste outro exemplo, usamos <strong>target="_self"</strong> para abrir o endereço na mesma aba da página. Neste exemplo, utilizamos <strong>rel="external"</strong> pois também se trata de uma 
+    fonte externa.</p>
+
+
+   <a href="página2.html" target="_self" rel="next">> Clique aqui</a> para seguir para a segunda página sobre links internos.
+   <br>
+   <h1>Links para download</h1>
+  <ul>
+    <li><a href="downloads/página1-pdf.pdf" target="_self" download="página-pdf.pdf" type="application/pdf">Baixar o pdf desta página</a>
+    
+    <li><a href="downloads/página1-pdf.zip" dowload="página1-pdf.zip"target="_self" type="application/zip">Baixar esta página em pdf compactado em ZIP</a>
+    
+    <li><a href="downloads/página html completa.zip" download="página completa html.zip" type="application/zip">Baixar página html completa</a></li>
+  </ul>
+
+</body>
+</html>

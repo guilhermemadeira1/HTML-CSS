@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        img{
+            height:200px ;
+            width: 250px;
+            display: none;
+        }
+        #op1:hover{
+            
+
+        }
+        div#imagens{
+            margin-top: 100px;
+        }
+        .op{
+            border: 1px solid black;
+            width: 300px;
+            margin: auto;
+            background-color: rgb(243, 201, 150);
+        }
+        .op:hover{
+           background-color: #ff8c00;
+           
+        }
+    </style>
+</head>
+<body>
+    <h1>Selecione</h1>
+     <div id="opções">
+        <p class="op" id="op1">imagem1</p>
+        <p class="op" id="op2">Imagem2</p>
+        <p class="op" id="op3">Imagem3</p>
+     </div>
+    <div id="imagens">
+        <img src="https://images.pexels.com/photos/440731/pexels-photo-440731.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="i1" alt="paisagem1">
+
+        <img src="https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="i2" alt="paisagem2">
+
+        <img src="https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="i3" alt="paisagem3">
+  
+    </div>
+    <script>
+        var mostra = document.querySelector('div#imagens')
+
+        var opções = document.getElementsByClassName('seleção')
+
+        var img1 = document.querySelector('i1')
+        var img2 = document.querySelector('i2')
+        var img3 = document.querySelector('i3') 
+        
+        opções.addEventListener('mouseenter', exibirimagem)
+
+        function exibirimagem(){
+
+            if (op1.innerHTML=''){
+              img1.style.display='block'
+            }
+            else if(op2.hover){
+                var imagem = document.createElement('img')
+              imagem.setAttribute('id','imagem')
+              mostra.appendChild('imagem')
+             imagem.src='https://images.pexels.com/photos/346529/pexels-photo-346529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
+            else if(op3.hover){
+                var imagem = document.createElement('img')
+              imagem.setAttribute('id','imagem')
+              mostra.appendChild('imagem')
+             imagem.src='https://images.pexels.com/photos/1107717/pexels-photo-1107717.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+            }
+                 
+
+            }
+    </script>
+</body>
+</html>

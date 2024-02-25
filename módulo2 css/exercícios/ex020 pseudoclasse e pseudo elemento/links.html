@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /*
+             # = id
+             . = class
+             : = pseudo-class
+             :: = pseudo-element
+            */
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /*links*/
+        a{
+            color: #ff0000;
+            text-decoration: none;
+            /*formatação padrão*/
+        }
+        a:visited{
+            color: darkred;
+            background-color: rgba(0, 0, 255, 0.582);
+            /*quando o link for acessado*/
+        }
+        a:hover{
+            color: black;
+            text-decoration: underline;
+            background-color: #ff000038;
+            box-shadow: 2px 1px 2px #000000b0;
+            padding: 2px;
+            /*quando passar o cursor*/
+        }
+        a:active{
+            color: rgb(255, 255, 255);
+            background-color: rgba(255, 140, 0, 0.733);
+            /*ao clicar  ou pressionar*/
+        }
+        a::after{
+            content: '[ link ]';
+            /*
+            : pseudoclasse -> se refere ao estado do elemento 
+            ::pseudoelemento -> se refere ao elemento em si
+
+            ::after -> depois do elemento
+            content: -> adicionar conteúdo
+            */
+        }
+        a::before{
+            content:'>> ';
+        }
+        .especial::after{
+            content:' ⇐';
+            
+        }
+        .especial{
+            background-color: #ffee003b;
+        }
+        /*título*/
+        h1{
+            text-align: center;
+        }
+        h1:hover{
+           color:#ff0000;
+        }
+        h1:active{
+            background-color: #fbff00;
+        }
+        h1::before{
+            content: '> ';
+        }
+        h1::after{
+            content: ' <';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://gustavoguanabara.github.io" target="_blank">Repositório Github</a>
+        </li>
+        <li><a href="https://youtube.com/cursoemvideo/" target="_blank" class="especial">Canal do youtube </a>
+        </li>
+        <li><a href="https://www.cursoemvideo.com" target="_blank">site do cursoemvideo</a>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico.ico" type="image/x-icon">
+    <title>Mídias em html5</title>
+</head>
+<body>
+    <h1>Trabalhando com mídias</h1>
+
+    <h2>Imagem dinâmica</h2>
+   <p>Veja o video sobre este tópico: <a href="https://www.youtube.com/watch?v=cAgkwPWE4hU">Clique aqui</a></p> 
+   <p>Abra este site em vários dispositivos diferentes ou aumente ou diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/P300x300.png" type="image/png">
+
+        <source media="(max-width: 1050px)" srcset="imagens/M700x700.png" type="image/png">
+
+        <img src="imagens/G1000x1000.png" alt="Imagem flexível">
+    </picture>
+
+    <h2>Reproduzindo áudios com HTML5</h2>
+    <p>Veja o vídeo sobre este tema: <a href="https://www.youtube.com/watch?v=4OZYsFl-J9s&t=9s">Clique aqui</a></p> 
+   <h3>Exemplo:</h3>
+    <p>Colony - TrackTribe (sem atribuição).</p>
+
+    <audio src="midia/Colony - TrackTribe sem atribuição.mp3" type="audio/mpeg" preload="none" controls></audio>
+
+    <p>Measured Paces - Kevin MacLeod (com atribuição)</p>
+    <audio src="midia/Measured Paces - Kevin MacLeod com atribuição.mp3" type="audio/mpeg" preload="none" controls></audio>
+
+<h3>Áudios dinâmicos</h3>
+ 
+    <audio preload="metadata" controls>
+        <source src="midia/Colony - TrackTribe sem atribuição.mp3" type="audio/mpeg" controls>
+
+     <!--Caso não seja prossivel reproduzir-->   
+        <p>Não foi possível reproduzir. Baixe o áudio em mp3 <a href="midia/Colony - TrackTribe sem atribuição.mp3" type="audio/mpeg">clicando aqui.</a></p>
+    </audio>
+
+    <p>Em caso de erro ao reproduzir, baixe o áudio do exemplo acima <a href="midia/Colony - TrackTribe sem atribuição.mp3" target="self" type="audio/mpeg">clicando aqui.</a></p>
+
+    <!--Atribuições ao áudio 2 do exemplo 1:-->
+    <p>Measured Paces de Kevin MacLeod é licenciada de acordo com a licença Atribuição 4.0 da Creative Commons. https://creativecommons.org/licenses/by/4.0/
+
+        Fonte: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100164
+        
+        Artista: http://incompetech.com/</p>
+</body>
+</html>

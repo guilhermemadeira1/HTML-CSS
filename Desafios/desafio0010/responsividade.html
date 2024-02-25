@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Responsividade</title>
+    <style>
+        body{
+            background-color: grey;
+        }
+        main{
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+
+            /*width: 800px;*/
+            max-width: 800px;
+            min-width: 320px;
+            margin: auto;
+            /*o main da página vai se ajustando ao tamanho máximo e mínino*/
+        }
+        img{
+            width: 100%;
+            /*a imagem vai se ajustando de acordo com o tamanho da página*/
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Testando Responsividade</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est nesciunt atque dicta autem, sit hic totam voluptatum consequatur necessitatibus quos, animi numquam obcaecati accusamus corporis, dolorem facilis exercitationem molestiae officia. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus dolorem repudiandae eaque iusto quisquam dicta quae unde, aspernatur ducimus labore hic exercitationem magnam consequatur soluta aliquid quia tempore enim qui.</p> 
+        <picture>
+            <source media="(max-width: 300px)" srcset="imagens/irina-blok-pq.jpg">
+            <img src="imagens/irina-blok.jpg" alt="irina-block">
+        </picture>
+        <!--Quando a tela ultrapassar o tamanho máximo, a imagem será alterada-->
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam delectus velit a reprehenderit perferendis assumenda repellat aliquam, ducimus quo ut expedita molestias nihil esse omnis vitae, maxime error voluptates illum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dignissimos nobis quia cupiditate harum earum, dolorum, pariatur repudiandae consequatur perferendis debitis natus ex amet labore, fuga praesentium aperiam nisi suscipit?</p>
+    </main>
+</body>
+</html>
