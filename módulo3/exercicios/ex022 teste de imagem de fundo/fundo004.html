@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamento de fundo</title>
+    <style>
+        body{
+            height: 100vh; /*vh = view height*/
+            border: 1px dashed black;/*borda pontilhada*/
+            background-image: url("https://gustavoguanabara.github.io/html-css/imagens/mascote.png");
+            background-size: 100px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* background-position: posição-coluna posição-linha*/
+        }
+        .coluna-left{
+            border: 1px solid #ff0000;
+            margin-right: auto;
+            width: 1px;
+            height: 100%;
+        }
+        .coluna-center{
+            border: 1px solid #002fff;
+            margin: 10px;
+            width: 1px;
+            height: 95%;
+            margin-left: 50%;
+            margin-top: -50%;
+        }
+        .coluna-right{
+            border: 1px solid #fffb00;
+            margin-left: auto;
+            width: 1px;
+            height: 90%;
+            margin-left: auto;
+            margin-top: -611px;
+        }
+        .linha-left{
+
+        }
+        .linha-center{
+
+        }
+        .linha-right{
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="coluna-left"></div>
+    <div class="coluna-center"></div>
+    <div class="coluna-right"></div>
+    <div class="linha-left">--------------------------------------------------------------</div>
+    <div class="linha-center"></div>
+    <div class="linha right"></div>
+</body>
+</html>
