@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <title>formulario</title>
+    <style>
+        input{
+            display: block;
+            /*display block para colocar cada input embaixo do outro*/
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tipos de formulários e atributos</h1>
+
+    <p>tag <strong>&lt;form&gt;</strong>: contêiner que agrupa formulários informando um endereço para onde eles serão enviados (post) ou recebidos(get)</p>
+
+    <form action="endereço1">
+        <h2>input type=""</h2>
+
+        <strong>text</strong><input type="text" placeholder="texto">
+
+        <strong>number</strong><input type="number" placeholder="número">
+
+        <strong>password</strong><input type="password" id="senha" placeholder="senha:">
+
+        <strong>email</strong><input type="email" placeholder="meuemail@email.com">
+
+        <strong>tel</strong> (numero de telefone)<input type="tel" pattern="([0-9]{2}) [0-9]{4} - [0-9]{4}" placeholder="padrão (xx) xxxx-xxxx">
+
+        <strong>date</strong> <input type="date">
+
+        <strong>color</strong> (rgb, hex, hsl) <input type="color">
+
+        <strong>range</strong> (controle deslizante/slider) define valores numéricos flexíveis<input type="range" value="50" min="50" max="100" step="5">
+        <span style="color:crimson">
+            atributos do &lt;input type="range"&gt; acima:
+            <br>
+            <br>
+            value="50" (valor inicial =50)<br>min="50" (valor mínimo =50)<br>max="100" (valor máximo =100)
+            <br>step="5" (pula de 5 em 5)
+        </span>
+
+        <p><strong>&lt;input type="hidden"&gt; (escondido)</strong><input type="hidden"></p>
+
+        <p><strong>checkbox</strong> <input type="checkbox"></p>
+
+        <strong>radio</strong><input type="radio">
+
+        <strong>reset </strong>(botão de limpar formularios da pagina)<input type="reset">
+
+        <strong>button</strong> <input type="button" value="input button">
+
+        <strong>submit</strong> (envia os dados das seções do formulario para o endereço especificado na tag <strong>&lt;form action=""&gt;</strong>) por meio do atributo <strong>action=""</strong><input type="submit">cada seção é uma caixa de entrada ou saída de dados inserida na tag &lt;form&gt;
+    </form>
+    <hr>
+    <h2>outros</h2>
+    <form action="endereço2">
+
+        <strong>select</strong> (menu suspenso seleção de opções com determinados valores),<br>os valores de cada opção selecionável são determinados pelo atributo <strong>value="" </strong>
+        <p>
+            <select>
+                <option value="1">opção1, valor=1</option>
+                <option value="2">opção2, valor=2</option>
+                <option value="3">opção3, valor=3</option>
+            </select>
+        </p>
+        <p>
+            <strong>textarea</strong>
+            <textarea cols="20" rows="5" class="formulario" placeholder="área de texto"></textarea>
+        </p>
+        <!--cols(colunas), rows(linhas)-->
+        <strong>button</strong> <button class="formulario">botão</button>
+    </form>
+    <br/>
+    <hr>
+    <h2>Atributos de formularios</h2>
+
+    <form action="endereço3">
+        <strong>placeholder</strong> &lt;input&gt;<input type="text" placeholder="placeholder">
+
+        <strong>required</strong> &lt;input&gt; (campo obrigatório)<input type="text" required>
+
+        <strong>min / max &lt;input type="number"&gt;</strong> (atrbui valor mínimo e máximo para uma caixa de entrada de números)<input type="number" min="0" max="10" placeholder="0 - 10">
+
+        <strong>minlength / maxlength &lt;input type="text"&gt;</strong> (atribui um valor mínimo e máximo de caracteres de uma caixa de texto)<input type="text" minlength="0" maxlength="5" 
+        placeholder="0 a 5 caracteres">
+
+        <strong>autofocus &lt;input&gt;</strong> (campo selecionado automaticamente quando aparecer na página)
+        <input type="text" autofocus>
+
+        <strong>pattern &lt;input type="text,password,email,tel"&gt;</strong> (padrão de dados: [valor minimo-valor maximo]{quantidade de valores com esse padrão})<br/>exemplo: 3 numeros de 0 a 9; 2 ou 3 letras de A a Z<input type="text" pattern="[0-9]{3}-[A-Z]{2,3}" placeholder="padrão nnn-AA/nnn-AAA">
+        No pattern, o valor mínimo e máximo é uma sequência letras (a-z/A-Z) ou números (qualquer-qualquer)
+        <br>
+        <br>
+     <span style="background-color: #0f0f20; color: white;" >
+            novalidate &lt;form novalidate&gt;
+            <form novalidate></form> desativar a validação dados das seções do formulario da tag &lt;form&gt; no momento do envio o envio <br><br>
+            method &lt;form method=""&gt;
+            <form method=""></form> informa o método de acesso a dados pelos formulários: <br>method="get"(obter valor de um endereço ou servidor)<br>method="post" (enviar valor a um endereço ou servidor)
+     </span>
+    </form>
+
+
+</body>
+</html>

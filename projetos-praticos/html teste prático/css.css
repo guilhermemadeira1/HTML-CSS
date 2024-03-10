@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+   body{background-color: rgb(59, 21, 6);
+   font-family: Arial;
+   text-align: center;
+    }
+    h1{color: rgb(33, 211, 101);
+    font-family: cursive;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.438);
+    }
+    h2{color: rgb(74, 163, 94);
+    font-family: cursive;
+    }
+    h3{color: rgb(247, 247, 133)
+    }
+    p{color: hsl(56, 100%, 85%);
+    text-align: center;
+    }
+    img{
+        width: 130px;
+        height: 130px;
+        border-radius: 5px;
+        box-shadow: 5px 5px 5px black;
+    }
+    

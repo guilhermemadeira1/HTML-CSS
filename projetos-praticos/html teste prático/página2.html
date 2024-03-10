@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="favicon/árvore.ico" type="image/x-icon">
+    <style>
+        body{
+            padding: 500px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="css.css">
+    <title>página2</title>
+</head>
+<body>
+    <h1>Segunda página</h1>
+
+    <p>
+        <abbr title="...">
+                <a href="página3.html">
+                
+                        <img src="imagens1/android-chrome-192x192.png" alt="arvore" id="arvore">
+                </a>
+        </abbr>
+    </p>
+    <p>Não clique na imagem.</p>
+
+<script>
+    var img = document.querySelector('img#arvore')
+    
+    img.addEventListener('mouseenter',entrar)
+    img.addEventListener('mouseout',sair)
+
+    function entrar(){
+        img.src='https://media.tenor.com/htGY-EnVwqIAAAAM/meme.gif'
+    }
+    function sair(){
+        img.src='imagens1/android-chrome-192x192.png'
+    }
+</script>
+
+</body>
+</html>
