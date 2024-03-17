@@ -1,0 +1,22 @@
+@charset "UTF-8";
+:root{
+    --cor1:#C7FFED;
+    --cor2:#D8FFDB;
+    --cor3: #008F8C;
+    --cor4: #015958;
+    --cor5: #023535;
+}
+body{
+    background-image: linear-gradient(to top,var(--cor3), var(--cor4) );
+    color: var(--cor1);
+}
+a{
+    color: var(--cor1);
+    text-decoration: none;
+}
+header{
+
+}
+main{
+   
+}

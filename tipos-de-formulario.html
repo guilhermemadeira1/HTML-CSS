@@ -14,7 +14,7 @@
 <body>
     <h1>Tipos de formulários e atributos</h1>
 
-    <p>tag <strong>&lt;form&gt;</strong>: contêiner que agrupa formulários informando um endereço para onde eles serão enviados (post) ou recebidos(get)</p>
+    <p>tag <strong>&lt;form&gt;</strong>: contêiner que agrupa formulários informando um endereço para onde os dados serão enviados (post) ou recebidos(get)</p>
 
     <form action="endereço1">
         <h2>input type=""</h2>
@@ -33,7 +33,8 @@
 
         <strong>color</strong> (rgb, hex, hsl) <input type="color">
 
-        <strong>range</strong> (controle deslizante/slider) define valores numéricos flexíveis<input type="range" value="50" min="50" max="100" step="5">
+        <strong>range</strong> (controle deslizante/slider) define valores numéricos fixos a partir de um valor mínimo e máximo.
+        <input type="range" value="50" min="50" max="100" step="5">
         <span style="color:crimson">
             atributos do &lt;input type="range"&gt; acima:
             <br>
@@ -44,15 +45,23 @@
 
         <p><strong>&lt;input type="hidden"&gt; (escondido)</strong><input type="hidden"></p>
 
-        <p><strong>checkbox</strong> <input type="checkbox"></p>
+        <p><strong>checkbox</strong> 
+        <input type="checkbox"></p>
 
-        <strong>radio</strong><input type="radio">
+        <strong>radio</strong>
+        <input type="radio">
 
-        <strong>reset </strong>(botão de limpar formularios da pagina)<input type="reset">
+        <strong>reset </strong>(botão de limpar formularios da pagina)
+        <input type="reset">
 
-        <strong>button</strong> <input type="button" value="input button">
+        <strong>button</strong> 
+        <input type="button" value="input button">
 
-        <strong>submit</strong> (envia os dados das seções do formulario para o endereço especificado na tag <strong>&lt;form action=""&gt;</strong>) por meio do atributo <strong>action=""</strong><input type="submit">cada seção é uma caixa de entrada ou saída de dados inserida na tag &lt;form&gt;
+        <strong>submit</strong> (envia os dados das seções do formulario para o endereço especificado na tag <strong>&lt;form action=""&gt;</strong>) por meio do atributo <strong>action=""</strong>
+
+        <input type="submit">
+
+        cada seção é uma caixa de entrada ou saída de dados inserida na tag &lt;form&gt;
     </form>
     <hr>
     <h2>outros</h2>
@@ -78,27 +87,35 @@
     <h2>Atributos de formularios</h2>
 
     <form action="endereço3">
-        <strong>placeholder</strong> &lt;input&gt;<input type="text" placeholder="placeholder">
+        <strong>placeholder</strong> &lt;input&gt;
+        <input type="text" placeholder="placeholder">
 
-        <strong>required</strong> &lt;input&gt; (campo obrigatório)<input type="text" required>
+        <strong>required</strong> &lt;input&gt; (campo obrigatório)
+        <input type="text" required>
 
-        <strong>min / max &lt;input type="number"&gt;</strong> (atrbui valor mínimo e máximo para uma caixa de entrada de números)<input type="number" min="0" max="10" placeholder="0 - 10">
+        <strong>min / max &lt;input type="number"&gt;</strong> (atrbui valor mínimo e máximo para uma caixa de entrada de números)
+        <input type="number" min="0" max="10" placeholder="0 - 10">
 
-        <strong>minlength / maxlength &lt;input type="text"&gt;</strong> (atribui um valor mínimo e máximo de caracteres de uma caixa de texto)<input type="text" minlength="0" maxlength="5" 
+        <strong>minlength / maxlength &lt;input type="text"&gt;</strong> (atribui um valor mínimo e máximo de caracteres de uma caixa de texto)
+        <input type="text" minlength="0" maxlength="5" 
         placeholder="0 a 5 caracteres">
 
         <strong>autofocus &lt;input&gt;</strong> (campo selecionado automaticamente quando aparecer na página)
         <input type="text" autofocus>
 
-        <strong>pattern &lt;input type="text,password,email,tel"&gt;</strong> (padrão de dados: [valor minimo-valor maximo]{quantidade de valores com esse padrão})<br/>exemplo: 3 numeros de 0 a 9; 2 ou 3 letras de A a Z<input type="text" pattern="[0-9]{3}-[A-Z]{2,3}" placeholder="padrão nnn-AA/nnn-AAA">
+        <strong>pattern &lt;input type="text,password,email,tel"&gt;</strong> (padrão de dados: [valor minimo-valor maximo]{quantidade de valores com esse padrão})<br/>exemplo: 3 numeros de 0 a 9; 2 ou 3 letras de A a Z
+        <input type="text" pattern="[0-9]{3}-[A-Z]{2,3}" placeholder="padrão nnn-AA/nnn-AAA">
         No pattern, o valor mínimo e máximo é uma sequência letras (a-z/A-Z) ou números (qualquer-qualquer)
         <br>
         <br>
      <span style="background-color: #0f0f20; color: white;" >
             novalidate &lt;form novalidate&gt;
-            <form novalidate></form> desativar a validação dados das seções do formulario da tag &lt;form&gt; no momento do envio o envio <br><br>
+            <form novalidate></form>
+            desativar a validação dados das seções do formulario da tag &lt;form&gt; no momento do envio o envio <br><br>
             method &lt;form method=""&gt;
-            <form method=""></form> informa o método de acesso a dados pelos formulários: <br>method="get"(obter valor de um endereço ou servidor)<br>method="post" (enviar valor a um endereço ou servidor)
+
+            <form method=""></form> 
+            informa o método de acesso a dados pelos formulários: <br>method="get"(obter valor de um endereço ou servidor)<br>method="post" (enviar valor a um endereço ou servidor)
      </span>
     </form>
 

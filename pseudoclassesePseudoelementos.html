@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+    *::selection{
+        background-color:#b900008c ;
+        color: #00ff00;
+        /*ao passar o cursor selecionando qualquer elemento*/
+    }
+    p::first-letter{
+        font-size: 25px;
+        color: blue;
+        /*primeira letra*/
+    } 
+    p::first-line{
+        font-weight: bold;
+        /*primeira linha*/
+    }
+    P::before{
+        content:"INÍCIO.. "
+    }
+    p::after{
+        content: "..FIM"
+        bott
+    }
+    p:hover{
+        color: #1437ff;
+    }
+    p:active{
+        color: red;
+        /*ao clicar*/
+    }
+    p::selection{
+        background-color:#035a5052 ;
+        color: #fffb00;
+        /*ao passar o cursor selecionando os parágrafos*/
+    }
+    li:first-child{
+        color: yellow;
+        /*primeiro item da lista*/
+    }
+    li:last-child{
+        color: #2baa2b;
+        /*último item da lista*/
+    }
+    input:checked{
+        box-shadow: 1px 1px 10px 5px black;
+        /*quando estiver marcado*/
+    }
+    ul{
+        list-style-type: disc;
+        list-style-type: armenian;
+        /*estilo de lista*/
+    }
+    ul::before{
+        content:">>>>>>>>>>>"
+        /*conteúdo antes*/
+    }
+    ul::after{
+        content: "<<<<<<<<<<<<"
+        /*conteúdo depois*/
+    }
+    table,td,th{
+        border: solid 1px black;
+    }
+    tr:first-child{
+        background-color: #1437ff;
+        /*primeira linha da tabela*/
+    }
+    tr:last-child{
+        background-color: red;
+        /*ultima linha da tabela*/
+    }
+    td:first-child{
+        background-color: yellow;
+        /*primeira coluna*/
+    }
+    td:last-child{
+        background-color: #721ab1;
+        /*última coluna*/
+    }
+    p{
+       line-height: 1.5em;
+       /*espaçamento de linha*/
+       letter-spacing: 1px;
+       /*espaçamento de letras*/
+       word-spacing: 5px;
+       /*espaçamento de palavras*/
+    }
+ 
+     </style>   
+</head>
+<body>
+   
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis amet, non in, harum nobis laudantium, nemo nostrum a obcaecati ipsum iure consequuntur possimus qui tempore officia optio voluptatum excepturi dolores!</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, porro perspiciatis? Molestias vel minus, maiores veniam reprehenderit dicta dolor qui eligendi asperiores sunt, rem mollitia nam! Sunt tenetur ratione dicta.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores ex hic quibusdam. Libero repellendus consequuntur sint aspernatur tempora temporibus reiciendis impedit tenetur. Ab assumenda iste ex unde exercitationem minus fuga!</p>
+
+    <ul>
+        <li>00000</li>
+        <li>11111</li>
+        <li>22222</li>
+        <li>33333</li>
+        <li>44444</li>
+        <li>55555</li>
+        <li>66666</li>
+    </ul>
+    
+    <ul>
+        <li>primeiro</li>
+        <li>segundo</li>
+        <li>terceiro</li>
+        <li>quarto</li>
+        <li>quinto</li>
+    </ul>
+    <input type="checkbox">
+
+    <table>
+        <tr>
+            <th>titulo1</th>
+            <th>titulo2</th>
+            <th>tiulo3</th>
+            <th>tutulo4</th>
+        </tr>
+        <tr>
+            <td>dado1</td>
+            <td>dado2</td>
+            <td>dado3</td>
+            <td>dado4</td>
+        </tr>
+        <tr>
+            <td>dado1</td>
+            <td>dado2</td>
+            <td>dado3</td>
+            <td>dado4</td>
+        </tr>
+    </table>
+</body>
+</html>

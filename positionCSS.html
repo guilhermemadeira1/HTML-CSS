@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*por padrão os elementos possuem position: static;*/
+
+        header,nav,main,section,footer{
+            
+            border: solid 1px black;
+            text-align: center;
+            padding: 10px;
+            
+        }
+        #rolagem{
+            height: 1500px;
+            border: solid 1px #0000003d;
+        }
+        header{
+            position: static;
+            background-color: aqua;
+        }
+        nav{
+            position: fixed;
+            top: 10px;
+            background-color: #00ff005d;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>header</header>
+    <nav>nav</nav>
+    <main>main</main>
+    <section>section</section>    
+    <footer>footer</footer>
+    <div id="rolagem"></div>
+    
+
+</body>
+</html>
