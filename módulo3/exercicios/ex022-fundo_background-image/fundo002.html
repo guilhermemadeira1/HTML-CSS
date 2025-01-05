@@ -1,48 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalização de fundos</title>
-    <style>
-        body{
-            background-image: url('imagens/pattern003.png');
-            background-size: 50px 50px;
-            background-repeat: repeat;
-        }
-        #d1{
-            background-color: #ffffff;
-            padding: 20px;
-            width: 100px;
-            height: 100px;
-            margin: auto;
-            border-radius: 20px;
-            box-shadow: 10px 10px 10px #00000081;
-            position: relative;
-            top: 250px;
-        }
-        #d1:hover{
-            background-image: url('imagens/pattern001.png');
-            background-size: 100%;
-            background-repeat: no-repeat;
-        }
-     
-    </style>
-</head>
-<body>
-    <div id="d1"></div>
-    <script>
-        let d1 = document.querySelector('#d1'); //querySelector() obtem 1 elemento
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundo repetido</title>
+        <style>
+            body{
+                background-size: 200px; /*tamanho da imagem no fundo (de cada imagem, se houver renderização)*/
+                /*background-repeat: repeat;  (padrão, repete a imagem até preencher a página)*/
+                /*background-repeat: no-repeat; (só carrega a imagem uma vez)*/
+                /*background-repeat: repeat-x; (repete a imagem na horizontal)*/
+                /*background-repeat: repeat-y; (repete a imagem na vertical)*/
+                background-repeat: repeat;
+                /*carrega imagem da url interna ou externa*/
+                background-image: url('https://gru.ifsp.edu.br/images/phocagallery/galeria2/image04_grd.png');
+            }
+        </style>
+    </head>
+    <body>
 
-        d1.addEventListener('click',()=>{
-           d1.style.top = '150px';
-           d1.style.transition = '0.5s';
-           d1.style.background = 'transparent';
-        });
-
-
-
-    </script>
-</body>
+    </body>
 </html>

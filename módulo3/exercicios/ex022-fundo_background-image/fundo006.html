@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charse="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundo fixo na tela</title>
+        <style>
+            body{
+                /*definindo imagem de fundo que cobre 100% da tela (viewport)*/
+
+                height: 100vh; /*define a altura do conteiner body como 100% da viewport,
+                 para que o fundo do conteiner tenha o mesmo tamanho da viewport.*/
+
+     
+                background-color: black; /*em sites, a cor de fundo é carregada antes da imagem de fundo*/
+                background-image: url('imagens/wallpaper002.jpg'); /*definindo imagem de fundo*/  
+                background-position: center top; /*focandoa imagem na posição centro superior*/
+                background-repeat: no-repeat; /*imagem sem repetição*/
+                background-size: cover; /*cover faz a imagem preencher a tela inteira de forma cortada*/
+                background-attachment: fixed; /*fixed faz a imgem ficar fixa enquanto a página é rolada.
+                OBS: por padrão e background-attachment: scroll; onde o fundo rola junto com a página*/
+                
+                /*
+                  background-size: cover; define que a imagem deve cobrir 100% do espaço do conteiner, 
+                  cortando a imagem para se ajustar a todos os tamanhos de tela.
+                  A imagem pode ser exibida de forma picotada em alguns tamanhos de tela. */
+
+                /*
+                  background-size: contain; define que toda a imagem deve cobrir o conteiner sem corte,
+                  sempre visualizando a imagem completa idependemente do tamanho da tela. 
+                  O formato da imagem pode não preencher toda tela.*/
+                 /*
+
+                 /*
+                  Shorthand background
+
+                  color -> image -> position -> repeat -> [size] -> attachment
+
+                  OBS: O size não funciona no shorthand, mas é incluido na documentação
+                  fornecida pela w3c. O shorthand não suporta background-size por enquanto.
+                 
+                  background: black url('imagens/wallpaper002.jpg') center top no-repeat fixed;
+
+                 */
+ 
+            }
+            main{
+                background-color: white;
+                border: 2px solid blue;
+                text-align: center;
+                margin: auto; /*margin-left e margin-right centralizados de forma automática pelo navegador*/
+                border-radius: 20px;
+                max-width: 700px; /*faz que a largura do conteiner preencha toda a tela enquanto ela tiver 
+                tamanho inferior a 700 pixels. Se a tela ficar com largura maior que 700, o conteiner ficará com tamaho fixo de 700 pixels.*/
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Teste de imagem de fundo</h1>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Alias cumque quae vitae ea, explicabo provident nam laudantium
+                quis deserunt facilis expedita eos minus reiciendis quisquam 
+                ad odio consequatur beatae aliquam?
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Repellendus voluptatem mollitia perspiciatis repudiandae 
+                numquam consectetur corporis, itaque officia accusantium 
+                fugiat, minus facere autem adipisci sed obcaecati assumenda 
+                ut dicta veniam!
+                
+            </p>
+        </main>
+    </body>
+</html>
