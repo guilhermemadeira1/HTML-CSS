@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo AJAX com XMLHttpRequest</title>
+</head>
+<body>
+    <button id="loadDataXMLHttpRequest">Carregar Dados (XMLHttpRequest)</button>
+    <div id="resultXMLHttpRequest"></div>
+
+    <script>
+        document.getElementById('loadDataXMLHttpRequest').addEventListener('click', function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.example.com/data', true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    document.getElementById('resultXMLHttpRequest').innerText = xhr.responseText;
+                } else {
+                    console.error('Erro ao carregar dados:', xhr.statusText);
+                }
+            };
+            xhr.send();
+        });
+    </script>
+</body>
+</html>

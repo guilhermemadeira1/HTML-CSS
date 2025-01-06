@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* 
+    Sobreposição de propriedades(estilos) iguais em cascata:
+    ex1:
+       #div1{
+             color: red; 
+             color: blue; -> red sobrepoe blue.
+         }
+    ex2:
+        #div1{
+              color: red; 
+        } 
+        #div1{
+              color: blue; -> blue sobrepoe red.
+        }
+
+*/
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-size: 20px;
+}
+body,html{
+    background-color: darkgray;
+}
+header, footer{
+    text-align: center;
+    /*text-transform: uppercase; fonte maiuscula*/
+    background-color:black;
+    color: white;
+    padding: 20px;
+    margin: -10px;
+}
+
+h1{
+    font-variant: small-caps; /*define a fonte maiúscula, com as minúsculas em formato maiúsculo pequeno*/
+    font-size: 40px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header a:hover, footer a:hover{ 
+    /*
+      header > a -> seleciona todos os links que são filhos diretos de header.
+      header a   ->  seleciona todos os links filhos de header, mesmo que sejam indiretos(que possuem outro conteinei pai entre o header).
+    */
+    text-decoration: underline;
+}
+section{
+    /*vh === view height*/
+    padding-top: 10vh; /*o padding-top é variavel e igual a 10% da altura da tela(viewport)*/
+    padding-bottom: 10vh; /*o padding-bottom é variavel e igual a 10% da altura da tela.*/
+    padding-left: 30px; /* padding tem tamanho fixo de 30 pixels. */
+    line-height: 2em; /*espaçamento abaixo das letras. 1 em == 16px*/
+}
+section.common-sec{
+    background-color: white;
+}
+section.image-sec{
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top center;
+    color: white;
+}
+section.image-sec p{
+    background-color: #00000059;
+    width: 200px;
+    padding: 10px;
+}
+section#sec2{
+    background-image: url('pacote-d012/imagens/background001.jpg');
+   
+}
+section#sec4{
+    background-image: url('pacote-d012/imagens/background002.jpg');
+}
+
+

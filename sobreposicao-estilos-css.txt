@@ -1,0 +1,21 @@
+
+  Sobreposição de propriedades(estilos) iguais:
+
+  A última propriedade, no mesmo bloco do seletor, se sobrepõe a outra propriedade igual.	
+
+    ex1:
+       div{
+           color: red; 
+           color: blue; -> blue sobrepõe red.
+         }
+
+  A última propriedade, em outro bloco com mesmo seletor, se sobrepõe a outra propriedade igual.
+
+    ex2:
+        div{
+            color: red; 
+        } 
+        div{
+            color: blue; -> red sobrepõe blue.
+        }
+

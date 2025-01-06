@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo AJAX com Axios</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button id="loadDataAxios">Carregar Dados (Axios)</button>
+    <div id="resultAxios"></div>
+
+    <script>
+        document.getElementById('loadDataAxios').addEventListener('click', function() {
+            axios.get('https://api.example.com/data')
+                .then(response => {
+                    document.getElementById('resultAxios').innerText = response.data;
+                })
+                .catch(error => console.error('Erro ao carregar dados:', error));
+        });
+    </script>
+</body>
+</html>

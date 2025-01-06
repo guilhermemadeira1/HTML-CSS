@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo AJAX com Fetch API</title>
+</head>
+<body>
+    <button id="loadDataFetch">Carregar Dados (Fetch API)</button>
+    <div id="resultFetch"></div>
+
+    <script>
+        document.getElementById('loadDataFetch').addEventListener('click', function() {
+            fetch('https://api.example.com/data')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('resultFetch').innerText = data;
+                })
+                .catch(error => console.error('Erro ao carregar dados:', error));
+        });
+    </script>
+</body>
+</html>
