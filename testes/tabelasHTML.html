@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        :root{
+            --azul: #6565c5;
+            --vermelho: #d46363;
+            --amarelo: #ece06e;
+            --verde: #66d162;
+        }
+        table,tr,td,thead,tbody,tfoot{
+            border: solid 1px black;
+        }
+        table{
+            padding: 20px;
+            margin: auto;
+            margin-top: 150px;
+        }
+        tr,td{
+            padding: 10px;
+        }
+        tr#linha1{
+            background-color: var(--azul);
+        }
+        tr#linha2{
+            background-color: var(--amarelo);
+            
+        }
+        tr#linha3{
+            background-color: var(--vermelho);
+
+        }
+        tr#linha4{
+            background-color: var(--verde);
+        }
+        td#linha3Coluna2{
+            background-color: black;
+            color: white;
+        }
+        td:hover{
+            background-color: #0000008a;
+            color: white;
+        }
+        thead{
+            background-color: aqua;
+        }
+        tbody{
+            background-color: #b837a2;
+        }
+        tfoot{
+            background-color: chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <table id="tabela1">
+        <thead id="cabeçalhoTabela">
+            <th>título cabeçalho</th>
+        </thead>
+        <thbody id="corpoTabela">
+            <tr id="linha1">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td colspan="2">coluna3</td>
+            </tr>
+            <tr id="linha2">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+            <tr id="linha3">
+                <td>coluna1</td>
+                <td id="linha3Coluna2">coluna2</td>
+                <td>coluna3</td>
+                <td rowspan="2">coluna4</td>
+            </tr>
+            <tr id="linha4">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+            
+            </tr>
+            <tr id="linha5">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+        </thbody>
+        <tfoot id="rodapéTabela">
+            <th>título rodapé</th>
+        </tfoot>
+    </table>
+
+    <table id="tabela 2">
+        <thead id="cabeçalhoTabela">
+            <th>título cabeçalho</th>
+        </thead>
+        <thbody id="corpoTabela">
+            <tr id="linha1">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+            <tr id="linha2">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+            <tr id="linha3">
+                <td>coluna1</td>
+                <td id="linha3Coluna2">coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+            <tr id="linha4">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+            </tr>
+            <tr id="linha5">
+                <td>coluna1</td>
+                <td>coluna2</td>
+                <td>coluna3</td>
+                <td>coluna4</td>
+                <!--Linha 5 sem cor definida, fica com a cor do fundo da tabela (tbody)-->
+            </tr>
+        </thbody>
+        <tfoot id="rodapéTabela">
+            <th>título rodapé</th>
+        </tfoot>
+    </table>
+</body>
+</html>

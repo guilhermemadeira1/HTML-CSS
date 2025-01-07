@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Árvore</title>
+    <link rel="shortcut icon" href="favicon/árvore.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="css.css">
+    <style>
+
+      p#link{color: rgb(74, 163, 94); 
+        font: normal 20px Serif;
+        margin-top: 200px;
+       }
+       
+    </style>
+
+</head>
+<body>
+    <h1 style="text-align: center;">Árvore</h1>
+    <p>ÁRVORE, a ávore feliz.</p>
+   
+    <a href="página2.html" target="_self">
+      <abbr title="Clique aqui">
+        <picture>
+          <source media="(max-width: 750px)" srcset="imagens1/árvore200x300.png" type="image/png">
+          <source media="(max-width: 1150px)" srcset="imagens1/árvore500x600.png" type="image/png">
+         <img id="arvore" src="imagens1/árvore700x500.png" alt="Árvore">
+        
+      </abbr>
+      </picture>
+    </a>
+
+
+   <h2>O que é árvore?</h2>
+   <p style="text-align: left;">Árvore é um vegetal de tronco lenhoso cujos ramos só saem a certa altura do solo. Em termos biológicos é uma planta permanentemente lenhosa de grande porte, com raízes pivotantes, caule lenhoso do tipo tronco, que forma ramos bem acima do nível do solo e que se estendem até o ápice da raiz.</p>
+
+
+  <p id="link">
+    Seguinda página &gt;
+    <a href="página2.html">Clique aqui</a>&lt;
+
+ </p>        
+ <script>
+    var i = document.getElementById('arvore')
+    i.addEventListener('mouseenter',entrar)
+    i.addEventListener('mouseout',sair)
+
+    function entrar(){
+      i.src='https://media.tenor.com/htGY-EnVwqIAAAAM/meme.gif'
+    }
+    function sair(){
+      i.src='imagens1/árvore700x500.png'
+    }
+
+ </script>
+</body>
+</html>
