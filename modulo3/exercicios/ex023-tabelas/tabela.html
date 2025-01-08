@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela html</title>
+        <style>
+            body{
+               
+            }
+            table{
+                border-collapse: collapse; /*remove espaçametos entre as celulas da tabela.
+                OBS: O padrão é separate (separado)*/
+                margin: auto;
+            }
+            td{
+                border: solid 1px black;
+                text-align: left;
+                padding: 20px;
+            }
+
+            table.tabela{
+                border-collapse: separate;
+                border: solid 2px black;
+                margin :auto; /*margin-left e margin-right automáticos*/
+                margin-top: 200px;
+            }
+            th.cabecalho{
+                border: solid 2px darkmagenta;
+                background-color: yellow;
+            }
+            tr.linha{
+                background-color: aqua;
+            }
+            td.celula{
+                border: solid 2px red;
+                padding: 15px;
+            }
+
+        </style>
+    <head>
+    <body>
+        <h1>Dados de tabelas em html</h1>
+
+    <!--
+        table -> limite do conteúdo da tabela 
+        tr    -> linha da tabela (table row)
+        td    -> célula de dados da tabela (table data)
+        th    -> célula de cabeçalho para os dados da tabela (table header).
+
+        hierarquia: table
+                     |___table-row (tr)
+                           |__table-header (th)
+                           |__table-data (td)      
+    -->
+        <table>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </table>
+        <!-- 
+
+         Atalho para criar 1 tabela com 3 table rows, 
+         com cada linha contendo 3 table datas:
+
+                    table>tr*3>td*3   
+                           
+        -->
+        <table class="tabela">
+            <tr class="linha">
+               <th class="cabecalho">A</th>
+               <th class="cabecalho">B</th>
+               <th class="cabecalho">C</th>
+            </tr>
+            <!--
+                O fechamento das tags de tabela 
+                (table, td, tr e th) são opcionais.
+            -->       
+            <tr class="linha"> 
+                <td class="celula">A1
+                <td class="celula">B1
+                <td class="celula">C1
+            
+            
+            <tr class="linha">
+                <td class="celula">A2</td>
+                <td class="celula">B2</td>
+                <td class="celula">C2</td>
+            </tr>
+            <tr class="linha">
+                <td class="celula">A3</td>
+                <td class="celula">B3</td>
+                <td class="celula">C3</td>
+            </tr>
+            <tr class="linha">
+                <td class="celula">A4</td>
+                <td class="celula">B4</td>
+                <td class="celula">C4</td>
+            </tr>
+        </table>
+    </body>
+</html>
