@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agrupamentos de colunas</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+            table{
+               width: 500px;
+               border-collapse: collapse;
+            }
+            tr:nth-child(even){
+                background-color: #0000003d;
+                /*efeito listrado com preto transparente*/
+            }
+            td,th{
+                border: 1px solid black;
+                padding: 5px;
+            }
+            .coluna-verde{
+                background-color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Aplicando estilos em grupos de colunas</h1>
+        <table>
+            <!--
+                A tag colgroup (não a propriedade colgroup) permite aplicar 
+                propriedades a todas as células de cada coluna da tabela.
+
+                Cada coluna, em ordem, é representada pela tag col 
+                e as propriedades aplicadas a esta afetará todas as células 
+                da coluna que ela representa. 
+
+            -->
+            <colgroup>
+                <col style="background-color: yellow">
+                <col style="background-color: blue">
+                <col style="background-color: red" >
+                <col class="coluna-verde" span="2"> <!--span="2" expande a propriedade para duas colunas a partir dela.-->
+                <col style="background-color: fuchsia">
+                <!--
+                    A propriedade span da tag col permite expandir a quantidade
+                    de colunas afetadas pelas propriedades da tag col.
+
+                    Se o span for maior que 1, as propriedades das novas tags col
+                    só terão efeito a partir da última coluna afetada pelo span.
+
+                    OBS: Repare que no exemplo acima há 5 tags cols que aplicam 
+                    estilos para 6 colunas da tabela.
+                -->
+            </colgroup>
+            <tr>
+                <th>Nome</th>
+                <th>Sexo</th>
+                <th>Idade</th>
+                <th>Profissão</th>
+                <th>Senioridade</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>Ana Maria</td>
+                <td>F</td>
+                <td>25</td>,
+                <td>Analista</td>
+                <td>Júnior</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+            <tr>
+                <td>Claudio</td>
+                <td>M</td>
+                <td>28</td>
+                <td>Programador</td>
+                <td>Pleno</td>
+                <td>São Paulo</td>
+            </tr>
+            <tr>
+                <td>Gustavo</td>
+                <td>M</td>
+                <td>42</td>
+                <td>Professor</td>
+                <td>Senior</td>
+                <td>Rio de Janeiro</td>
+            </tr>
+            <tr>
+                <td>Hélio</td>
+                <td>M</td>
+                <td>19</td>
+                <td>Vendedor</td>
+                <td>Júnior</td>
+                <td>Minas Gerais</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>F</td>
+                <td>29</td>
+                <td>Médica</td>
+                <td>Pleno</td>
+                <td>Minas Gerais</td>
+            </tr>
+            <tr>
+                <td>Otávio</td>
+                <td>M</td>
+                <td>22</td>
+                <td>Nutricionista</td>
+                <td>Júnior</td>
+                <td>Amapá</td>
+            </tr>
+        </table>
+    </body>
+</html>

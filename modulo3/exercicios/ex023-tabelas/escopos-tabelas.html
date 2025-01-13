@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        table{
+            
+            border-collapse: collapse;
+            width: 600px;
+        }
+        caption{
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 10px;
+        }
+       
+        td:nth-child(odd){
+            background-color: #e9a2a2;
+        }
+        td:nth-child(even){
+            background-color: #9999cc;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    <body>
+        <h1>Tabela completa</h1>
+        <table>
+            <thead>
+                <caption>Filmes favoritos</caption>
+                <!--
+                    O atributo scope é utilizado na tag de título (th) para 
+                    definir o escopo dos dados que ela representa. 
+                    Não faz alterações visuais, mas dão suporte a algoritmos de leitura e busca.
+
+                    scope="col" -> os dados estão em uma única coluna.
+                    scope="row" -> os dados estão em uma única linha.
+                    scope="colgroup" -> os dados formam um grupo de conas.
+                    scope="rowgroup" -> os dados formam um grupo de linhas.
+                -->
+                <tr>
+                    <th scope="col">Grupo</th>
+                    <th scope="col">Nomes</th>
+                    <th scope="colgroup" colspan="3">Filmes</th>
+                </tr>
+            </thead>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="4">Mais assistido</th>
+                    <td>Hulk</td>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Mulheres</th>
+                    <td>Ana Maria Santos</td>
+                    <td>Alien</td>
+                    <td>Rambo</td>
+                    <td>Vingadores</td>
+                </tr>
+                <tr>
+                    <td>Beatriz Souza</td>
+                    <td>Hulk</td>
+                    <td>Inception</td>
+                    <td>Batman</td>
+                </tr>
+                <tr>
+                    <td>Cláudia Melo</td>
+                    <td>Oblivion</td>
+                    <td>Matrix</td>
+                    <td>Big Hero</td>
+                </tr>
+                <tr>
+                    <th scope="rowgroup" rowspan="3">Homens</th>
+                    <td>Bruno Medonça</td>
+                    <td>Intocáveis</td>
+                    <td>Amnésia</td>
+                    <td>Gladiador</td>
+                </tr>
+                <tr>
+                    <td>Daniel Lourenço</td>
+                    <td>Wall-E</td>
+                    <td>Old Boy</td>
+                    <td>Dangal</td>
+                </tr>
+                <tr>
+                    <td>Fabiano Mota</td>
+                    <td>Star Wars 5</td>
+                    <td>Taxi Driver</td>
+                    <td>Toy Story</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

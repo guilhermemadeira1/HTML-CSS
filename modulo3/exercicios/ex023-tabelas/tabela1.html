@@ -10,13 +10,22 @@
             }
             table{
                 border-collapse: collapse; /*remove espaçametos entre as celulas da tabela.
-                OBS: O padrão é separate (separado)*/
+                OBS: A propriedade deve ser definida na tag <table>.
+                OBS: O padrão é border-colapse: separate (separado).*/
                 margin: auto;
             }
             td{
                 border: solid 1px black;
-                text-align: left;
+                text-align: center; /* text-align aplica alinhamento horizontal.*/
+                /*vertical-align: bottom; */
+                /* vertical-align aplica alinhamento vertical.*/
                 padding: 20px;
+            }
+            th{
+                border: 1px solid black;
+            }
+            td.alinhado-vertical{
+                vertical-align: bottom;
             }
 
             table.tabela{
@@ -54,21 +63,39 @@
                            |__table-data (td)      
     -->
         <table>
-            <tr>
-                <td>A1</td>
-                <td>B1</td>
-                <td>C1</td>
-            </tr>
-            <tr>
-                <td>A2</td>
-                <td>B2</td>
-                <td>C2</td>
-            </tr>
-            <tr>
-                <td>A3</td>
-                <td>B3</td>
-                <td>C3</td>
-            </tr>
+            
+            <tbody>
+                <tr>
+                    <td class="alinhado-vertical">A1</td>
+                    <td>B1</td>
+                    <td>C1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                    <td>C2</td>
+                </tr>
+                <tr>
+                    <td>A3</td>
+                    <td>B3</td>
+                    <td>C3</td>
+                </tr>
+                
+            </tbody>
+             <!--
+                Caso seja definida a estrutura semântica da tabela
+                (thead, tbody, tfoot) a tabela será renderizada 
+                conforme a semântica (1º thead, 2º tbody, 3º tfoot), 
+                idependentemente da sequência inserida no html.
+            -->
+            <tfoot>
+                <th>rodapé</th>
+            </tfoot>
+            <thead>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </thead>
         </table>
         <!-- 
 
@@ -110,5 +137,6 @@
                 <td class="celula">C4</td>
             </tr>
         </table>
+        
     </body>
 </html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family: Arial;
+    }
+    table{
+        border-collapse: collapse;
+        font-family: monospace;
+        font-size: 1.2em;
+    }
+    td,th{
+        border: 1px solid black;
+        padding: 5px;
+    }
+    tr:nth-child(2n){
+        background-color: #e0caac;
+    }
+    th, td.vendas-totais{
+        background-color: #8d4b4b;
+        color: white;
+    }
+    .rolagem-lateral{
+        /*
+            A propriedade overflow define o comportamento do elemento
+            quando o mesmo "transborda"(overflow) o espaçamento da tela.
+
+            overflow-x -> define rolagem lateral, 
+            overflow-y -> define rolagem vertical 
+            overflow -> é um shorthand que define
+            o comportamento de rolagem em ambos os eixos.
+
+            Rolagem lateral:
+
+            overflow-x: auto; -> adciona barra de rolagem apenas quando
+            a largura do conteúdo ultrapaçar a largura da tela.
+
+            overflow-x: visible; -> o resto do conteúdo do elemento continua 
+            visível quando ultrapaça a largura permitida (cria rolagem lateral na página).
+
+            overflow-x: hidden; -> o resto do conteúdo é ocultado quando ultrapaça
+            a largura limite.
+
+            overflow-x: scroll; -> adciona rolagem no conteiner mesmo se não
+            ultrapaçar a largura limite. 
+
+        */
+        overflow-x: auto;
+    }
+    .rolagem-lateral-vertical{
+        width: 200px;
+        height: 200px; /*O texto ultrapaça a altura de 200 pixels e 
+                        cria a rolagem vertical.*/
+
+        overflow: auto; /*define a rolagem lateral ou vertical caso
+                        a altura e/ou largura do conteúdo ultrapace o 
+                        limite de altura e/ou largura.*/
+    }
+  
+</style>
+<body>
+    <h1>Tabela responsiva</h1>
+    <div class="rolagem-lateral">
+        <!--
+            A div serve para encapsular a tabela e aplicar a propriedade
+            que define a rolagem de seu conteúdo na div (no caso, a tabela).        
+        -->
+        <table>
+            <caption><strong>Venda de eletrodomésticos</strong></caption>
+            <thead>
+                <tr>
+                    <th scope="col">Produto</th>
+                    <th scope="col">Jan</th>
+                    <th scope="col">Fev</th>
+                    <th scope="col">Mar</th>
+                    <th scope="col">Abr</th>
+                    <th scope="col">Mai</th>
+                    <th scope="col">Jun</th>
+                    <th scope="col">Jul</th>
+                    <th scope="col">Ago</th>
+                    <th scope="col">Set</th>
+                    <th scope="col">Out</th>
+                    <th scope="col">Nov</th>
+                    <th scope="col">Dez</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Máquina de lavar</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Ventilador</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Refrigerador</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Geladeira</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Celular</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Game console</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+                <tr>
+                    <td>Computador</td>
+                    <td>15</td>
+                    <td>01</td>
+                    <td>11</td>
+                    <td>10</td>
+                    <td>05</td>
+                    <td>16</td>
+                    <td>12</td>
+                    <td>03</td>
+                    <td>18</td>
+                    <td>22</td>
+                    <td>09</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="12">Vendas totais: </th>
+                    <td class="vendas-totais">27882332789</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <div>
+        <h2>Role o texo para baixo</h2>
+        <p class="rolagem-lateral-vertical">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+            Officiis, itaque nemo officia provident rem a accusantium 
+            porro non architecto consequatur repellat sed.
+            Quidem, facere ipsam adipisci libero ad vel fuga.
+        </p>
+    </div>
+</body>
+</html>

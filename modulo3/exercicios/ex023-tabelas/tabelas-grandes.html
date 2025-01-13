@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+  
+    <style>
+        table{
+            border: solid 1px black;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            position: relative;
+
+        }
+        thead > tr > th{
+            /* position: stick; Faz o título ficar fixo na tela ao rolar 
+            até a rolagem passar por toda a tebela. 
+            Após a tebela for ultrapassada, o título volta a rolar.
+            
+            OBS: Para isso, a tabela (conteiner) precisa ter a posição relativa.
+            position: relative;
+
+            */
+            
+            position: sticky;
+            top: -1px; /*define a distancia que o título ficará do 
+            topo da tela ao ficar fixo.*/
+          
+        }
+        td,th{
+            border: solid 1px black;
+            padding: 5px;
+        }
+        caption{
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+        thead th{
+            background-color: gray;
+        }
+        tfoot th{
+            background-color: #568856;
+        }
+        tfoot td{
+            color: red;
+        }
+        input{
+            display: block;
+        }
+        input[type="button"]{
+            display: inline;
+        }
+        section#insert_data{
+            margin-top: 20px;
+        }
+        /*aplicando efeito zebrado pela pseudoclasse :nth-child()*/
+        
+         /*É possível especificar a posição do estilo, como:
+            tr:nth-child(3n) -> a cada elementos filhos de tr (o parent pode ser outra tag).
+            tr:nth-child(4n) -> a cada 4 elementos filhos de tr.
+            tr:nth-child(5n) -> a cada 5 elementos filhos de tr.
+        */
+
+        tbody > tr:nth-child(even){   
+        /*aplica estilo a cada linha de posição par.
+            tr:nth-child(even) = tr:nth-child(2n) 
+        */
+            background-color: #db8787 ;
+        }
+        tbody > tr:nth-child(odd){
+        /*aplica estilo a cada linha de posição ímpar.
+            tr:nth-child(odd) = tr:nth-child(2n-1)
+        */
+            background-color: #f5f570;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <!--
+        Estruturando tabelas grandes
+
+        caption -> descrição da tabela
+        thead   -> cabeçalho da tabela (títulos)
+        tbody   -> corpo da tabela (dados)
+        tfoot   -> rodapé da tabela (resumo dos dados)
+
+        hierarquia:
+
+        table
+           |__caption
+           |__thead
+           |     |__tr
+           |         |__th,td
+           |__tbody
+           |      |__tr
+           |          |__th,td
+           |__tfoot
+                 |__tr
+                     |__th,td
+    -->
+    <h1>Tabelas com muitos dados</h1>
+    <table>
+        <caption scope="col">População Estadual</caption> 
+        <!--
+            O atributo scope é usado em tags de cabeçalho da tabela (th) para definir 
+            o escopo dos dados que ela representa: scope="col"(coluna), scope="row"(linha).
+            Não tem resultado visual, mas serve pra algoritmos de busca analisar o conteúdo 
+            com sua semantica correta.
+
+            Ex: o th de tbody da tabela abaixo tem escopo de coluna pois seus dados estão na vertical, 
+            enquanto o th de tfoot tem escopo de linha pois seus dados estão na horizontal.
+        -->
+        <thead>
+            <tr>
+                <th scope="col" style="width: 200px;">Estado</th>
+                <!--
+                    É possível pra alterar a largura das células
+                    aplicando estilo no título da coluna (th) ou nas células(td).
+                 -->
+                <th scope="col">População</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <tr>
+                <td class="state">Rio de Janeiro</td>
+                <td class="pop">121234</td>
+            </tr>
+            <tr>
+                <td class="state">São Paulo</td>
+                <td class="pop">222290</td>
+            </tr>
+            <tr>
+                <td class="state">Minas Gerais</td>
+                <td class="pop">32243345</td>
+            </tr>
+            <tr>
+                <td class="state">Espírito Santo</td>
+                <td class="pop">123231</td>
+            </tr>
+            <tr>
+                <td class="state">Pernambuco</td>
+                <td class="pop">2132234</td>
+            </tr>
+            <tr>
+                <td class="state">Rio Grande do Norte</td>
+                <td class="pop">2343413</td>
+            </tr>
+            <tr>
+                <td class="state">Mato Grosso</td>
+                <td class="pop">123223</td>
+            </tr>
+            <tr>
+                <td class="state">Tocantins</td>
+                <td class="pop">533232</td>
+            </tr>
+            <tr>
+                <td class="state">Goías</td>
+                <td class="pop">321211</td>
+            </tr>
+            <tr>
+                <td class="state">Sergipe</td>
+                <td class="pop">1232423</td>
+            </tr>
+            <tr>
+                <td class="state">Piauí</td>
+                <td class="pop">4324321</td>
+            </tr>
+            <tr>
+                <td class="state">Paraíba</td>
+                <td class="pop">234322</td>
+            </tr>
+            <tr>
+                <td class="state">Santa Catarina</td>
+                <td class="pop">1234234</td>
+            </tr>
+            <tr>
+                <td class="state">Rio Grande do Sul</td>
+                <td class="pop">32332</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <th scope="row">Total: </th>
+            <td id="total"></td>
+        </tfoot>
+    </table>
+    <section id="insert_data">
+        <label for="state_input">Inserir estado: </label>
+        <input type="text" id="state_input">
+
+        <label for="pop_input">Inserir população: </label>
+        <input type="number" id="pop_input">
+        <br>
+        <input type="button" value="inserir dado" id="insert_button">
+        <input type="button" value="deletar dados" id="delete_button">
+    </section>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Velit rerum accusamus laboriosam corporis, reiciendis 
+        eaque ad consectetur minus et quaerat sunt harum totam 
+        odit quae recusandae impedit ea blanditiis magni.
+    </p>
+</body>
+<script src="tabelas-grandes.js"></script>
+</html>
